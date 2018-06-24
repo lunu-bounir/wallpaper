@@ -1,0 +1,21 @@
+{
+  "name": "Dogs & Puppies Wallpapers & Themes",
+  "description": "Random wallpaper on your new tab for all dogs & puppies lovers",
+  "manifest_version": 2,
+  "version": "0.1.0",
+  "chrome_url_overrides": {
+    "newtab": "data/newtab/index.html"
+  },
+
+  "permissions": [
+    "storage"
+  ],
+
+  "icons": {
+    "16": "data/icons/16.png",
+    "32": "data/icons/32.png",
+    "48": "data/icons/48.png",
+    "64": "data/icons/64.png",
+    "128": "data/icons/128.png"
+  }
+}
