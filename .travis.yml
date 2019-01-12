@@ -1,5 +1,7 @@
 notifications:
   email: false
 sudo: required
+before_install:
+    - apt-get install expect
 language: node_js
 script: ./run.sh
