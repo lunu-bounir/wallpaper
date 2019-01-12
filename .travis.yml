@@ -2,11 +2,24 @@ notifications:
   email: false
 language: node_js
 node_js:
-  - "8"
+- '8'
 cache: yarn
 sudo: required
+
 before_install:
-  - sudo apt-get update
-  - sudo apt-get install -y expect
-  - yarn global add vue-cli
-script: ./run.sh
+- sudo apt-get update
+- sudo apt-get install -y expect
+- yarn global add vue-cli
+
+script: "./run.sh"
+
+deploy:
+  provider: releases
+  prerelease: true
+  api_key:
+    secure: VKO+VMY+L/eq1nvbP7uKiQfHf9u6zT4C3QiYpTS7LQiM5I2l5xevQmeNOg7UJpsIXBfR0j+agfg9IxzRFfZtyQaqeuV+/RXFAe/d/gm0y5ifQG/lgvnM7rnr0C5bbTUNyxJ2cGtJEJTo4av0M14voIxrwEfxKoVpwaT3OL6mNAzxKBLSK5o7e2W8D0lwLHcY5gW48ylWwlOm4SuLNAM0P1H1srSVRGs80luVqBIG/Lq9BQ4OFvpgwORlHgg/YhmtQvduQd/khFr00ekq455b09yeeByZE8eagnmDYrT839v9wcg8fuOqAHf2S35vUG0u3vljFA0auV7BcStg8/IN5m3wx8A3sEKMZPv3itV/IR0IH8fWQucHT8xutH1ThM0dqj09ySyN/caHMwCxanxGQm4ph75dI8Zb+HhNOcaxnkWCDsJOoz/UsfzhqylzcmXhWMJJen5Tf8CeKRqFy1jL7uVQLrcVFDXN17XOTRp8+258RH9KcxC/Cfl/wfmnPuII6DaL6YI6hMIHNoBJBeoE3ks4yAnGUwZayIHRI2t+QWEI3+p5uJljPqM2ERr93JHIiFfjoGKOCfKxgrRy26D0laaSG9JrEfaaPjpRvbh27tOhHBZBuKkOBn4qbzLtf6G1dLwM2eQKMZy2cY+Y1Moxl4cxNy9+vgUVfI3zAcO1cJk=
+  file: build/dist/build.js
+  skip_cleanup: true
+  on:
+    tags: true
+  overwrite: true
