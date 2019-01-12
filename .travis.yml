@@ -1,0 +1,5 @@
+notifications:
+  email: false
+sudo: required
+language: node_js
+script: ./run.sh

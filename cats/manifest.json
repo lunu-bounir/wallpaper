@@ -1,6 +1,6 @@
 {
-  "name": "Dogs & Puppies Wallpapers & Themes",
-  "description": "Random wallpaper on your new tab for all dogs & puppies lovers",
+  "name": "Cats & Kittens Wallpapers & Themes",
+  "description": "Random wallpaper on your new tab for all cats & kittens lovers",
   "manifest_version": 2,
   "version": "0.1.0",
   "chrome_url_overrides": {
@@ -10,6 +10,15 @@
   "permissions": [
     "storage"
   ],
+
+  "homepage_url": "http://add0n.com/wallpaper.html?from=ck",
+
+  "background": {
+    "persistent": false,
+    "scripts": [
+      "background.js"
+    ]
+  },
 
   "icons": {
     "16": "data/icons/16.png",
