@@ -2,7 +2,7 @@
   <div id="app">
     <header>
       <sidebar>
-        <preferences ref="prefs" v-bind:keywords="'cat, kitten'" @prefs="prefs"></preferences>
+        <preferences ref="prefs" v-bind:keywords="'dog, puppy'" @prefs="prefs"></preferences>
       </sidebar>
     </header>
     <div id="body">
