@@ -1,6 +1,4 @@
 #! /bin/bash
-npm install vue-cli
-
 ./expect.sh
 
 rm -r build/src/

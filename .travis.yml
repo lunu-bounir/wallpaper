@@ -1,8 +1,12 @@
 notifications:
   email: false
+language: node_js
+node_js:
+  - "8"
+cache: yarn
 sudo: required
 before_install:
   - sudo apt-get update
   - sudo apt-get install -y expect
-language: node_js
+  - yarn global add vue-cli
 script: ./run.sh
