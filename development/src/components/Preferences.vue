@@ -92,7 +92,7 @@ export default {
   name: 'preferences',
   props: {
     keywords: {
-      default: 'cat, kitten',
+      default: 'Disney',
       type: String
     }
   },

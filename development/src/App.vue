@@ -2,7 +2,7 @@
   <div id="app">
     <header>
       <sidebar>
-        <preferences ref="prefs" v-bind:keywords="'dog, puppy'" @prefs="prefs"></preferences>
+        <preferences ref="prefs" v-bind:keywords="'disney'" @prefs="prefs"></preferences>
       </sidebar>
     </header>
     <div id="body">
@@ -53,7 +53,7 @@ export default {
     url() {
       const o = this.$refs.prefs.image;
       return (new UnsplashPhoto()).all()
-         .fromCategory('animals')
+         .fromCategory('toy')
          .of(o.keywords.split(', '))
          .size(o.width, o.height)
          .fetch();
